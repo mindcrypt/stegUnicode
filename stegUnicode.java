@@ -14,7 +14,7 @@ import java.util.HashMap;
 
 public class stegUnicode {
 
-    public static String UNICODE_PATH = "./confusables_MIO.txt";
+    public static String UNICODE_PATH = "./confusables.txt";
     private static Options options = new Options();
 
     public static void main(String[] args) throws Exception{
