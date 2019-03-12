@@ -12,9 +12,9 @@ import java.util.Arrays;
 import java.util.HashMap;
 
 
-public class stegUnicode {
+public class StegUnicode {
 
-    public static String UNICODE_PATH = "./confusables.txt";
+    public static String UNICODE_PATH = "./confusables_MIO.txt";
     private static Options options = new Options();
 
     public static void main(String[] args) throws Exception{
@@ -32,7 +32,8 @@ public class stegUnicode {
             //System.out.println("Hidden option selected");
             HashMap<String, String> m = ReadUnicodeTable(UNICODE_PATH);
             //System.out.println("Binary option selected");
-            int nbits = global_input.length();
+
+            int nbits = Clean(global_input).length();
 
             String nhbits = getbinaryfromtexttohidden(hiddentext);
             System.out.println("\n-----");
@@ -323,7 +324,7 @@ public class stegUnicode {
             }
             aux_index++;
         }
-        aux += text.substring(splitbits.length,text.length());
+        aux += text.substring(aux_index,text.length());
         return aux;
     }
 
