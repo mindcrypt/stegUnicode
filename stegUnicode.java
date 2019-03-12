@@ -12,7 +12,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 
 
-public class StegUnicode {
+public class stegUnicode {
 
     public static String UNICODE_PATH = "./confusables_MIO.txt";
     private static Options options = new Options();
